@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_color_gradiant"
+    tools:context=".ui.fragments.intro.IntroFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/selectedRoomCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectedRoomCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin60"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginEnd="@dimen/margin20"
+            android:alpha="0.6"
+            android:backgroundTint="@color/trans"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/margin20"
+            app:cardElevation="@dimen/margin5"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/selectedRoomButton"
+                    style="@style/BaseButton"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/blue"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="@string/view_selected_room"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin60"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginEnd="@dimen/margin20"
+            android:alpha="0.6"
+            android:backgroundTint="@color/trans"
+            app:cardCornerRadius="@dimen/margin20"
+            app:cardElevation="@dimen/margin5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectedRoomCardView">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exploreButton"
+                    style="@style/BaseButton"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/blue"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="@string/explore"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/alphaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/shadow_dark_trans"
+            android:elevation="@dimen/margin50"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Room Picker</string>
+    <string name="click_back_again_to_exit">Click back again to exit</string>
+    <string name="ic_pager_1">Somewhere to go</string>
+    <string name="ic_pager_2">Somewhere to stay</string>
+    <string name="ic_pager_3">Something to make you happy</string>
+    <string name="explore">Explore</string>
+    <string name="max_occupancy">Max occupancy :</string>
+    <string name="view_selected_room">View selected room</string>
+</resources>
